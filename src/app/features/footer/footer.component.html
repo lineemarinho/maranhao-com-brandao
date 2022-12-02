@@ -1,0 +1,23 @@
+<footer>
+  <div class="container">
+    Siga nas redes sociais
+    <div class="social-media">
+      <a
+        target="_blank"
+        *ngFor="let socialMedia of socialMediaList"
+        [href]="socialMedia.link"
+      >
+        <img
+          alt="transaction.name"
+          src="/assets/icon/{{ socialMedia.icon }}.png"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="rights">
+    <div class="container">
+      Maranhão com Brandão<br />
+      @ 2022 - Todos os direitos reservados
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,48 @@
+@import 'src/styles/settings/responsive';
+
+.category {
+  background: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #C8D3E9;
+  width: 100%;
+  float: left;
+  padding: 20px 0;
+
+  @include for-tablet {
+    width: 90%;
+    padding: 5%;
+  }
+
+  .container {
+    width: 1220px;
+    margin: 0 auto;
+
+    @include for-tablet {
+      width: 100%;
+    }
+
+    .titleCategory {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 30px;
+      color: var(--color-dark);
+    }
+
+    .listCategory {
+      width: 100%;
+      float: left;
+    }
+
+    .itemCategory {
+      width: 77px;
+      font-size: 12px;
+      float: left;
+      text-align: center;
+
+      img {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

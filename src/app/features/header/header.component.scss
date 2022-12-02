@@ -1,0 +1,19 @@
+@import 'src/styles/settings/responsive';
+
+header {
+  width: 96%;
+  padding: 20px 2%;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  float: left;
+
+  .container {
+    width: 1220px;
+    margin: 0 auto;
+
+    @include for-tablet {
+      width: 100%;
+    }
+
+  }
+}

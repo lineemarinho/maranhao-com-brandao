@@ -1,0 +1,37 @@
+@import 'src/styles/settings/responsive';
+
+footer {
+  float: left;
+  color: var(--color-white);
+  text-align: center;
+  background-color: var(--color-primary-light);
+  width: 100%;
+  padding: 20px 0 0 0;
+  font-size: 15px;
+
+  .container {
+    width: 1220px;
+    margin: 0 auto;
+
+    @include for-tablet {
+      width: 100%;
+    }
+
+    .social-media {
+      width: 100%;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 20px 10px 0 0;
+      }
+    }
+  }
+
+  .rights {
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: var(--color-primary);
+  }
+
+}
