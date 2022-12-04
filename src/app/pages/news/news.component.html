@@ -1,10 +1,120 @@
 <app-header></app-header>
-<div class="container-imagens"></div>
+<div class="container-imagens">
+  <ng-image-slider
+    [imageSize]="{ width: '300px' }"
+    [images]="imageObject"
+    #nav
+  ></ng-image-slider>
+</div>
 <div class="container-information">
-  <div class="date">
-    <span class="material-symbols-outlined"> schedule </span>Há 45 minutos
+  <div class="back" (click)="back()">
+    <span class="material-symbols-outlined"> arrow_back_ios </span> voltar
   </div>
-  <div class="title">
-    Instituto de Educação, Ciência e Tecnologia do Maranhão
+  <div class="infoObra">
+    <div>
+      <span class="material-symbols-outlined mg"> payments </span>
+      <span>
+        Valor da obra<br />
+        <b> 1.500.000,00</b></span
+      >
+    </div>
+    <div>
+      <span class="material-symbols-outlined mg"> insights </span>
+      <span>
+        Status da obra:<br />
+        <b> Em andamento</b></span
+      >
+    </div>
+    <div>
+      <span class="material-symbols-outlined mg"> inventory </span>
+      <span>
+        Origem:<br />
+        <b> Proprio</b></span
+      >
+    </div>
   </div>
+  <div class="info">
+    <div class="date">
+      <span class="material-symbols-outlined"> schedule </span>Há 45 minutos
+    </div>
+    <div class="title">
+      Instituto de Educação, Ciência e Tecnologia do Maranhão
+    </div>
+    <div class="history">
+      Cidade:<span class="material-symbols-outlined"> pin_drop </span>
+      <b>São Luis - MA</b>
+    </div>
+    <div class="description">
+      Lorem ipsum dolor sit amet. Qui molestias molestias et minus iste in
+      reiciendis temporibus vel quis itaque est dolor sunt. Sed Quis atque et
+      ipsa recusandae est adipisci animi non esse ipsa et quidem blanditiis vel
+      atque libero.
+      <br /><br />
+      Ut iure dolor eum ducimus fuga cum perspiciatis earum aut natus facilis
+      qui illum blanditiis At alias assumenda et voluptas aliquid. At quia
+      aperiam ea voluptatem aliquid et omnis eaque ut sapiente dolore non
+      voluptas ratione. Eum provident quis et dolorem tenetur ea perspiciatis
+      repellendus aut reiciendis rerum eum impedit aperiam rem cumque minus aut
+      quidem molestiae?
+
+      <div class="timeline">
+        <ul class="timeline">
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag">Atualização da obra</span>
+                <span class="time-wrapper"
+                  ><span class="time">00/00/00 • 14h</span></span
+                >
+              </div>
+              <div class="desc">
+                Qui molestias molestias et minus iste in reiciendis temporibus
+                vel quis itaque est dolor sunt. Sed Quis atque et ipsa
+                recusandae est adipisci animi non esse ipsa et quidem blanditiis
+                vel atque libero.
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="flag">Atualização da obra</span>
+                <span class="time-wrapper"
+                  ><span class="time">00/00/00 • 14h</span></span
+                >
+              </div>
+              <div class="desc">
+                Lorem ipsum dolor sit amet. Qui molestias molestias et minus
+                iste in reiciendis temporibus vel quis itaque est dolor sunt.
+                Sed Quis atque et ipsa recusandae est adipisci animi non esse
+                ipsa et quidem blanditiis vel atque libero.
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag">Atualização da obra</span>
+                <span class="time-wrapper"
+                  ><span class="time">00/00/00 • 14h</span></span
+                >
+              </div>
+              <div class="desc">
+                Lorem ipsum dolor sit amet. Qui molestias molestias et minus
+                iste in reiciendis temporibus vel quis itaque est dolor sunt.
+                Sed Quis atque et ipsa recusandae est adipisci animi non esse
+                ipsa et quidem blanditiis vel atque libero.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="moore">
+  <app-card-news></app-card-news>
 </div>

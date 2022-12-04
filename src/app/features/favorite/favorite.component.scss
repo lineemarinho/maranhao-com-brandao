@@ -1,0 +1,28 @@
+.accept {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  font-size: 13px;
+  border-radius: 7px;
+}
+
+.modal-body {
+  font-size: 15px;
+}
+
+b {
+  font-size: 20px;
+}
+
+span {
+  color: var(--color-danger);
+  font-size: 30px;
+}
+
+.cancel {
+  padding: 10px 20px;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 13px;
+}

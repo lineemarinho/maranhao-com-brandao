@@ -9,14 +9,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewsModule } from './pages/news/news.module';
 import { HomeModule } from './pages/home/home.module';
 import { LoginModule } from './pages/login/login.module';
+import { ProfileModule } from './pages/profile/profile.module';
 
 registerLocaleData(localePt); //
 const routes: Routes = [
-  {
-    path: 'news',
-    loadChildren: () =>
-      import('./pages/news/news.module').then((m) => m.NewsModule),
-  },
   {
     path: 'home',
     loadChildren: () =>
@@ -32,6 +28,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/register/register.module').then((m) => m.RegisterModule),
   },
+  {
+    path: 'news',
+    loadChildren: () =>
+      import('./pages/news/news.module').then((m) => m.NewsModule),
+  },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./pages/profile/profile.module').then((m) => m.ProfileModule),
+  },
 ];
 @NgModule({
   declarations: [],
@@ -41,9 +47,10 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    NewsModule,
     HomeModule,
     LoginModule,
+    NewsModule,
+    ProfileModule,
     RouterModule.forRoot(routes, {
       initialNavigation: 'enabled',
     }),

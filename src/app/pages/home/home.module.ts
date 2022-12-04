@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from 'src/app/features/components.module';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [HomeComponent],
@@ -13,6 +13,7 @@ import { AgmCoreModule } from '@agm/core';
     ReactiveFormsModule,
     ComponentsModule,
     HomeRoutingModule,
+    BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCUCKOtPg60JidCnAno8gBGm_Ge8M5AZDg',
       libraries: ['places'],

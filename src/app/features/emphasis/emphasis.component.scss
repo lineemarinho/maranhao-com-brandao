@@ -29,15 +29,20 @@
     }
 
     >.card-new {
-      width: 600px;
+      width: 580px;
       float: left;
       border-radius: 10px;
       padding: 10px;
+      margin: 0 10px 0 0;
+
       background-color: var(--color-white);
+
+
 
       @include for-tablet {
         width: 90%;
         padding: 5%;
+        margin: 0 0 20px 0;
       }
 
 
@@ -78,11 +83,26 @@
 
 
       .image {
-        width: 222px;
+        width: 210px;
         border-radius: 10px;
         height: 155px;
         float: left;
+        overflow: hidden;
         background-color: #f3f3f3;
+
+        @include for-tablet {
+          width: 100%;
+        }
+
+        img {
+          height: 100%;
+          margin: -40px 0 0 0;
+          border-radius: 10px;
+
+          @include for-tablet {
+            width: 100%;
+          }
+        }
 
         @include for-tablet {
           width: 100%;

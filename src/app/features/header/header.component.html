@@ -1,6 +1,9 @@
 <header>
   <div class="container">
-    <img alt="transaction.name" src="/assets/logo/logo.svg" />
+    <img alt="Logo" (click)="home()" src="/assets/logo/logo.svg" />
+    <div *ngIf="construction" (click)="home()" class="obras">
+      <span class="material-symbols-outlined"> search </span>Acompanhar obras
+    </div>
     <span (click)="navigate()" class="material-symbols-outlined">
       account_circle
     </span>

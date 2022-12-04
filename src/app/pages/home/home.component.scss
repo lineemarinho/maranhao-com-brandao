@@ -87,13 +87,27 @@
 
 }
 
+.cont-banner {
+  width: 100%;
+
+  @include for-tablet {
+    width: 90%;
+    padding: 0 5%;
+  }
+}
+
 .banner {
-  width: 350px;
+  width: 400px;
   height: 140px;
   border-radius: 7px;
   background-color: aliceblue;
   float: left;
-  margin: 20px 10px 20px 0;
+  margin: 20px 5px 20px 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 
   @include for-tablet {
     width: 100%;

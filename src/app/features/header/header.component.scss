@@ -7,17 +7,37 @@ header {
   background-color: var(--color-primary);
   float: left;
 
+
   .container {
     width: 1220px;
     margin: 0 auto;
+
+
 
     @include for-tablet {
       width: 100%;
     }
 
+    .obras {
+      float: left;
+      font-size: 13px;
+      margin: 5px 0 0 30px;
+      color: var(--color-white);
+
+      >span {
+        float: left;
+        font-size: 12px;
+        margin: 3px 10px 0 20px;
+      }
+    }
+
     span {
       float: right;
       margin-top: 5px;
+    }
+
+    img {
+      float: left;
     }
 
   }

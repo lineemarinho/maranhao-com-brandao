@@ -4,32 +4,46 @@
   width: 100%;
   padding: 30px 0;
   float: left;
+  overflow-x: scroll;
 
   @include for-tablet {
     width: 90%;
     margin: 5%;
   }
 
+  .titleCard {
+    font-style: normal;
+    width: 1220px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    color: var(--color-dark);
+
+    @include for-tablet {
+      width: 100%;
+
+    }
+  }
+
   .container {
     width: 1220px;
     margin: 0 auto;
+    max-width: 100000px;
+    display: -webkit-flex;
+    overflow-x: scroll;
 
     @include for-tablet {
       width: 100%;
       margin-top: 30px;
+
     }
 
-    .titleCard {
-      font-style: normal;
 
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 30px;
-      color: var(--color-dark);
-    }
 
     >.card-new {
       width: 222px;
+      margin: 0 10px 0 0;
       float: left;
       border-radius: 10px;
       padding: 5px 5px 10px 5px;
@@ -42,6 +56,7 @@
         top: 10px;
         height: 40px;
         float: right;
+        z-index: 11111111;
         line-height: 50px;
         text-align: center;
         border-radius: 90px;
@@ -57,7 +72,7 @@
         position: relative;
         width: auto;
         right: -30px;
-        top: 145px;
+        top: 135px;
         height: 22px;
         line-height: 20px;
         padding: 0 10px;
@@ -66,6 +81,7 @@
         color: var(--color-white);
         text-align: center;
         float: right;
+        z-index: 11111111;
         border-radius: 90px;
         background: var(--color-primary-light);
       }
@@ -74,9 +90,14 @@
       .image {
         width: 222px;
         border-radius: 10px;
-        height: 155px;
-        background-color: #f3f3f3;
+        height: 148px;
         margin-bottom: 10px;
+
+        img {
+          width: 100%;
+          margin: -40px 0 0 0;
+          border-radius: 10px;
+        }
       }
 
       .date {
@@ -99,4 +120,8 @@
       }
     }
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

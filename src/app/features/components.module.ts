@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EmphasisComponent } from './emphasis/emphasis.component';
 import { CategoryComponent } from './category/category.component';
 import { CardNewsComponent } from './card-news/card-news.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -19,6 +20,7 @@ import { CardNewsComponent } from './card-news/card-news.component';
     EmphasisComponent,
     CategoryComponent,
     CardNewsComponent,
+    FavoriteComponent,
   ],
   exports: [
     HeaderComponent,
@@ -26,6 +28,7 @@ import { CardNewsComponent } from './card-news/card-news.component';
     EmphasisComponent,
     CategoryComponent,
     CardNewsComponent,
+    FavoriteComponent,
   ],
   entryComponents: [
     HeaderComponent,
@@ -33,6 +36,7 @@ import { CardNewsComponent } from './card-news/card-news.component';
     EmphasisComponent,
     CategoryComponent,
     CardNewsComponent,
+    FavoriteComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })

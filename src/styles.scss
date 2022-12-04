@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+.modal {
+  background-color: rgba(0, 0, 0, .4);
+  bottom: 0;
+  height: 100%;
+  color: var(--color-dark);
+  left: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  text-align: center;
+  z-index: 11111111;
+  /* Adjust according to your needs */
+}
+
+.modal.fade-anim {
+  transition: opacity 400ms ease-in-out;
+  will-change: opacity;
+  opacity: 0;
+}
+
+.modal.fade-anim.in {
+  opacity: 1;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 4px;
+  margin: 16px auto;
+  max-width: 450px;
+  position: relative;
+  transition: opacity 400ms ease-in-out;
+  width: 100%;
+  will-change: opacity;
+  display: inline-block;
+  text-align: left;
+}
+
+
+
+.modal-footer,
+.modal-header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 56px;
+  padding: 0 16px;
+}
+
+.modal-body {
+  padding: 30px 30px;
+  color: var(--color-gray-darker);
+  font-size: 12px;
+  text-align: center;
+}
+
+.modal-footer {
+  margin: 0 0 30px 0;
+
+  .close {
+    border-radius: 90px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 20px 0;
+    background-color: var(--color-gray-lightest-white) !important;
+    color: var(--color-gray-darker) !important;
+
+  }
+
+}
