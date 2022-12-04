@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NewsComponent } from './news.component';
 import { ComponentsModule } from 'src/app/features/components.module';
-import { NewsRoutingModule } from './news-routing.module';
+import { RegisterComponent } from './register.component';
+import { RegisterRoutingModule } from './register-routing.module';
 @NgModule({
-  declarations: [NewsComponent],
+  declarations: [RegisterComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     ComponentsModule,
-    NewsRoutingModule,
+    RegisterRoutingModule,
   ],
 })
-export class NewsModule {}
+export class RegisterModule {}

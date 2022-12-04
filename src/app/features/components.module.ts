@@ -7,7 +7,6 @@ import {
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { MapComponent } from './map/map.component';
 import { EmphasisComponent } from './emphasis/emphasis.component';
 import { CategoryComponent } from './category/category.component';
 import { CardNewsComponent } from './card-news/card-news.component';
@@ -17,7 +16,6 @@ import { CardNewsComponent } from './card-news/card-news.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    MapComponent,
     EmphasisComponent,
     CategoryComponent,
     CardNewsComponent,
@@ -25,7 +23,6 @@ import { CardNewsComponent } from './card-news/card-news.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    MapComponent,
     EmphasisComponent,
     CategoryComponent,
     CardNewsComponent,
@@ -33,7 +30,6 @@ import { CardNewsComponent } from './card-news/card-news.component';
   entryComponents: [
     HeaderComponent,
     FooterComponent,
-    MapComponent,
     EmphasisComponent,
     CategoryComponent,
     CardNewsComponent,

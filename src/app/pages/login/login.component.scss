@@ -1,0 +1,114 @@
+@import 'src/styles/settings/responsive';
+
+
+
+.image {
+  width: 50%;
+  float: left;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/images/background.png) !important;
+  flex-direction: row;
+  justify-content: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: cover;
+
+  @include for-tablet {
+    display: none;
+  }
+
+  img {
+    width: 300px;
+  }
+}
+
+.login {
+  width: 50%;
+  float: left;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @include for-tablet {
+    width: 90%;
+    padding: 0 5%;
+  }
+
+  .container {
+    width: 400px;
+    margin: 0 auto;
+
+    @include for-tablet {
+      width: 100%;
+    }
+
+    .text {
+      font-size: 22px;
+      float: left;
+      width: 100%;
+      color: var(--color-primary);
+
+    }
+
+    .description {
+      font-size: 14px;
+      float: left;
+      width: 100%;
+      margin: 20px 0;
+      color: var(--color-dark)
+    }
+
+
+    .password {
+      float: left;
+      font-size: 13px;
+      margin: 10px 0 30px 0;
+      text-align: center;
+
+      b {
+        color: var(--color-dark);
+      }
+    }
+
+    .account {
+      float: left;
+      font-size: 13px;
+      width: 100%;
+      float: left;
+      margin: 30px 0;
+      text-align: center;
+
+      b {
+        color: var(--color-primary);
+      }
+    }
+
+    input {
+      background: var(--color-white);
+      border: 0;
+      padding: 14px 2%;
+      outline: none;
+      border-radius: 4px;
+      font-size: 13px;
+      margin: 0 0 20px 0;
+      width: 96%;
+    }
+
+    .button {
+      border-radius: 90px;
+      width: 100%;
+      float: left;
+      background-color: var(--color-primary);
+      text-align: center;
+      font-size: 14px;
+      color: var(--color-white);
+      padding: 20px 0;
+    }
+  }
+}

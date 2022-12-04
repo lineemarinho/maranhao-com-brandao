@@ -8,6 +8,7 @@ import localePt from '@angular/common/locales/pt';
 import { RouterModule, Routes } from '@angular/router';
 import { NewsModule } from './pages/news/news.module';
 import { HomeModule } from './pages/home/home.module';
+import { LoginModule } from './pages/login/login.module';
 
 registerLocaleData(localePt); //
 const routes: Routes = [
@@ -21,6 +22,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'register',
+    loadChildren: () =>
+      import('./pages/register/register.module').then((m) => m.RegisterModule),
+  },
 ];
 @NgModule({
   declarations: [],
@@ -32,6 +43,7 @@ const routes: Routes = [
     FormsModule,
     NewsModule,
     HomeModule,
+    LoginModule,
     RouterModule.forRoot(routes, {
       initialNavigation: 'enabled',
     }),
