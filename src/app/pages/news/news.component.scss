@@ -15,12 +15,23 @@
     width: 100%;
     margin-top: 20px;
     color: #575A68;
+
+    @include for-tablet {
+      width: 90%;
+      margin: 20px 5% 0 5%;
+    }
+
   }
 
   .grad {
     width: 100%;
     float: left;
     margin: 30px 0;
+
+    @include for-tablet {
+      width: 100%;
+      margin: 10px 0;
+    }
 
 
     >.card-new {
@@ -30,6 +41,13 @@
       height: 248px;
       border-radius: 10px;
 
+
+      @include for-tablet {
+        width: 90%;
+        margin: 10px 5% 0 5%;
+      }
+
+
       .info {
         position: absolute;
         width: 360px;
@@ -37,12 +55,27 @@
         background-color: rgba(0, 0, 0, 0.311);
         margin-top: 160px;
         float: left;
+        border-radius: 0 0 10px 10px;
+
+        @include for-tablet {
+          width: 88%;
+          padding: 20px 1%;
+          margin-top: 129px;
+          border-radius: 0 0 10px 10px;
+
+        }
+
       }
 
       .image {
         width: 380px;
         border-radius: 10px;
         height: 248px;
+
+        @include for-tablet {
+          width: 100%;
+          padding: 20px 1%;
+        }
 
         img {
           width: 100%;
