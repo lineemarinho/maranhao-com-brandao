@@ -1,11 +1,13 @@
-<header>
-  <div class="container">
-    <img alt="Logo" (click)="home()" src="/assets/logo/logo.svg" />
-    <div *ngIf="construction" (click)="home()" class="obras">
-      <span class="material-symbols-outlined"> search </span>Acompanhar obras
-    </div>
-    <span (click)="navigate()" class="material-symbols-outlined">
-      account_circle
-    </span>
-  </div>
+<header class="header">
+  <img alt="Logo" (click)="home()" src="/assets/logo/logo.svg" />
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/">Principal</a></li>
+    <li><a href="/news">Notícias</a></li>
+    <li><a href="/about">Sobre</a></li>
+  </ul>
+  <span (click)="navigate()" class="material-symbols-outlined">
+    account_circle
+  </span>
 </header>

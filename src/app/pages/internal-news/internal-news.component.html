@@ -1,0 +1,124 @@
+<app-header></app-header>
+
+<div class="container-information">
+  <div class="back" (click)="back()">
+    <span class="material-symbols-outlined"> arrow_back_ios </span> voltar
+  </div>
+  <div class="image"><img alt="Obra" src="assets/images/obra1.jpeg" /></div>
+  <div class="constructions">
+    <div class="date">
+      <span class="material-symbols-outlined"> schedule </span>Há 45 minutos
+    </div>
+    <div class="title">
+      Instituto de Educação, Ciência e Tecnologia do Maranhão
+    </div>
+    <div class="history">
+      Cidade:<span class="material-symbols-outlined"> pin_drop </span>
+      <b>São Luis - MA</b>
+    </div>
+
+    <div class="information">
+      <ul>
+        <li>
+          <b>Artista:</b> Lazzari, Alfredo (Italia, Diecimo, 1871 - Argentina,
+          Buenos Aires, 1949)
+        </li>
+        <li><b>Origem:</b> Donación Ana Zaino de Lazzari, 1964</li>
+        <li><b>Data:</b> 1900</li>
+        <li><b>Período: </b>Arte Siglo XIX (1800-1910)</li>
+        <li><b>Escola:</b> Argentina S.XIX</li>
+        <li><b>Objeto: </b>Pintura</li>
+        <li><b>Soporte:</b> sobre painel</li>
+        <li><b>Medidas:</b> 22,2 x 14 cm. - Marco: 37 x 28 cm.</li>
+      </ul>
+      <div class="selo">
+        <a target="_blank" *ngFor="let selo of listSelo" [href]="selo.link">
+          <img alt="selo" src="/assets/selos/{{ selo.icon }}.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="refresh">
+      <b>Atualizado:</b> Um dia atrás - 27 de Novembro de 2022
+    </div>
+    <div class="card-new">
+      <div class="compartilhe">
+        <div class="date">
+          <span class="material-symbols-outlined"> schedule </span>Há 45 minutos
+        </div>
+
+        <div class="social-media">
+          <a
+            target="_blank"
+            *ngFor="let socialMedia of socialMediaList"
+            [href]="socialMedia.link"
+          >
+            <img
+              alt="transaction.name"
+              src="/assets/icon/{{ socialMedia.icon }}.png"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="image">
+        <img alt="Obra" src="assets/images/obra3.jpeg" />
+      </div>
+
+      <div class="title">
+        Instituto de Educação, Ciência e Tecnologia do Maranhão
+      </div>
+      <div class="description">
+        Rua Digna, obras na infraestrutura, lazer, entre outras, serão
+        inauguradas pelo Governo do Estado, em agenda, neste sábado (3), na
+        Região Metropolitana de São Luís. Serão contempladas as cidades de São
+        José de Ribamar e Raposa, com nova praça, porto, ruas pavimentadas e
+        outros benefícios. O governador Carlos Brandão conduzirá as
+        inaugurações.
+      </div>
+    </div>
+    <div class="refresh">
+      <b>Atualizado:</b> Um dia atrás - 27 de Novembro de 2022
+    </div>
+    <div class="card-new">
+      <div class="compartilhe">
+        <div class="date">
+          <span class="material-symbols-outlined"> schedule </span>Há 45 minutos
+        </div>
+
+        <div class="social-media">
+          <a
+            target="_blank"
+            *ngFor="let socialMedia of socialMediaList"
+            [href]="socialMedia.link"
+          >
+            <img
+              alt="transaction.name"
+              src="/assets/icon/{{ socialMedia.icon }}.png"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="image">
+        <img alt="Obra" src="assets/images/obra2.jpeg" />
+      </div>
+
+      <div class="title">
+        Instituto de Educação, Ciência e Tecnologia do Maranhão
+      </div>
+      <div class="description">
+        Rua Digna, obras na infraestrutura, lazer, entre outras, serão
+        inauguradas pelo Governo do Estado, em agenda, neste sábado (3), na
+        Região Metropolitana de São Luís. Serão contempladas as cidades de São
+        José de Ribamar e Raposa, com nova praça, porto, ruas pavimentadas e
+        outros benefícios. O governador Carlos Brandão conduzirá as
+        inaugurações.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="moore">
+  <app-card-news></app-card-news>
+</div>
+<app-footer></app-footer>

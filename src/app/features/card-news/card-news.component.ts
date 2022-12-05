@@ -16,7 +16,7 @@ export class CardNewsComponent implements OnInit {
   ngOnInit(): void {}
 
   navigate() {
-    this.router.navigate(['/news']);
+    this.router.navigate(['/internal-news']);
   }
   openFavorite(transaction?: any) {
     this.SimpleModalService.addModal(FavoriteComponent, {

@@ -1,44 +1,205 @@
 @import 'src/styles/settings/responsive';
 
-header {
+// header {
+//   width: 96%;
+//   padding: 20px 2%;
+//   color: var(--color-white);
+//   background-color: var(--color-primary);
+//   float: left;
+
+
+//   .container {
+//     width: 1220px;
+//     margin: 0 auto;
+
+
+
+//     @include for-tablet {
+//       width: 100%;
+//     }
+
+//     .obras {
+//       float: left;
+//       font-size: 13px;
+//       margin: 5px 0 0 30px;
+//       color: var(--color-white);
+
+//       >span {
+//         float: left;
+//         font-size: 12px;
+//         margin: 3px 10px 0 20px;
+//       }
+//     }
+
+//     span {
+//       float: right;
+//       margin-top: 5px;
+//     }
+
+//     img {
+//       float: left;
+//     }
+
+//   }
+// }
+.header {
+  float: left;
   width: 96%;
   padding: 20px 2%;
-  color: var(--color-white);
   background-color: var(--color-primary);
+  z-index: 3;
+
+  img {
+    margin-top: 13px;
+    float: left;
+  }
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  display: block;
+  font-size: 14px;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {}
+
+.header .logo {
+  display: block;
+  width: 170px;
   float: left;
 
+  img {
+    width: 100%;
+  }
+}
 
-  .container {
-    width: 1220px;
-    margin: 0 auto;
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked~.menu {
+  max-height: 240px;
+  background: white;
+  margin-top: 20px;
+  color: var(--color-primary);
+  border-radius: 7px;
+  width: 100%;
+  float: left;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+span {
+  float: right;
+  margin-top: 13px;
+  color: var(--color-white);
+
+  @include for-tablet {
+    display: none;
+  }
+
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li a {
+    color: white;
+  }
+
+  .header li {
+    float: left;
+  }
+
+  .header .menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
 
 
 
-    @include for-tablet {
-      width: 100%;
-    }
-
-    .obras {
-      float: left;
-      font-size: 13px;
-      margin: 5px 0 0 30px;
-      color: var(--color-white);
-
-      >span {
-        float: left;
-        font-size: 12px;
-        margin: 3px 10px 0 20px;
-      }
-    }
-
-    span {
-      float: right;
-      margin-top: 5px;
-    }
-
-    img {
-      float: left;
-    }
-
+@media (max-width: 1190px) {
+  .header li a {
+    color: var(--color-primary) !important;
+    border-bottom: 1px solid #f2f2f2;
   }
 }

@@ -10,6 +10,8 @@ import { NewsModule } from './pages/news/news.module';
 import { HomeModule } from './pages/home/home.module';
 import { LoginModule } from './pages/login/login.module';
 import { ProfileModule } from './pages/profile/profile.module';
+import { InternalNewsModule } from './pages/internal-news/internal-news.module';
+import { AboutModule } from './pages/about/about.module';
 
 registerLocaleData(localePt); //
 const routes: Routes = [
@@ -34,9 +36,21 @@ const routes: Routes = [
       import('./pages/news/news.module').then((m) => m.NewsModule),
   },
   {
+    path: 'internal-news',
+    loadChildren: () =>
+      import('./pages/internal-news/internal-news.module').then(
+        (m) => m.InternalNewsModule
+      ),
+  },
+  {
     path: 'profile',
     loadChildren: () =>
       import('./pages/profile/profile.module').then((m) => m.ProfileModule),
+  },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./pages/about/about.module').then((m) => m.AboutModule),
   },
 ];
 @NgModule({
@@ -51,6 +65,8 @@ const routes: Routes = [
     LoginModule,
     NewsModule,
     ProfileModule,
+    AboutModule,
+    InternalNewsModule,
     RouterModule.forRoot(routes, {
       initialNavigation: 'enabled',
     }),
