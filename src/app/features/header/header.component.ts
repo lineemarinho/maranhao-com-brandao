@@ -18,4 +18,16 @@ export class HeaderComponent implements OnInit {
   home() {
     this.router.navigate(['/']);
   }
+  login() {
+    this.router.navigate(['/login']);
+  }
+  news() {
+    this.router.navigate(['/news']);
+  }
+  about() {
+    this.router.navigate(['/about']);
+  }
+  search() {
+    this.router.navigate(['/search-news']);
+  }
 }

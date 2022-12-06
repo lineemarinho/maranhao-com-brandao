@@ -16,14 +16,35 @@
 
   }
 
-  .image {
+  >.image {
     width: 350px;
     float: left;
-    border-radius: 10px;
-    overflow: hidden;
+
+    img {
+
+      margin-top: -44px;
+    }
+
+    .favorite {
+      position: relative;
+      width: 40px;
+      right: 10px;
+      top: 10px;
+      height: 40px;
+      float: right;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 90px;
+      background: var(--color-white);
+
+      span {
+        color: var(--color-dark);
+      }
+    }
 
     img {
       width: 100%;
+      border-radius: 10px;
     }
 
     @include for-tablet {
@@ -153,7 +174,6 @@
 
       .image {
         width: 200px;
-        border-radius: 10px;
         float: left;
         margin-right: 15px;
         margin-bottom: 10px;
@@ -188,6 +208,12 @@
             width: 30px;
             height: 30px;
             margin: 10px 10px 0 0;
+
+            @include for-tablet {
+              margin: 0 10px 10px 0;
+
+              float: left;
+            }
           }
         }
 

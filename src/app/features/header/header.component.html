@@ -4,9 +4,10 @@
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
     <li><a href="/">Principal</a></li>
-    <li><a href="/news">Notícias</a></li>
-    <li><a href="/about">Sobre</a></li>
-    <li class="mobile"><a href="/login">Fazer login</a></li>
+    <li (click)="news()"><a>Notícias</a></li>
+    <li (click)="about()"><a>Sobre</a></li>
+    <li (click)="search()"><a>Buscar</a></li>
+    <li class="mobile" (click)="login()"><a>Fazer login</a></li>
   </ul>
   <span (click)="navigate()" class="material-symbols-outlined">
     account_circle

@@ -1,0 +1,39 @@
+@import 'src/styles/settings/responsive';
+
+.container-information {
+  margin: 0 auto;
+  width: 1220px;
+
+  @include for-tablet {
+    width: 90%;
+    padding: 0 5%;
+
+  }
+
+  .back {
+    width: 100%;
+    float: left;
+    margin: 20px 0;
+    display: flex;
+    font-size: 13px;
+
+    @include for-tablet {
+      margin: 20px 0 30px 0;
+      padding: 0 2%;
+      width: 96%;
+    }
+
+    >span {
+      font-size: 13px;
+      margin: 3px 5px 0 0;
+
+    }
+  }
+
+  .results {
+    width: 100%;
+    float: left;
+    font-size: 15px;
+  }
+
+}
