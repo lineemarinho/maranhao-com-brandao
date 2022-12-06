@@ -195,6 +195,13 @@ span {
   }
 }
 
+.mobile {
+  display: none;
+
+  @include for-tablet {
+    display: block;
+  }
+}
 
 
 @media (max-width: 1190px) {
@@ -202,4 +209,5 @@ span {
     color: var(--color-primary) !important;
     border-bottom: 1px solid #f2f2f2;
   }
+
 }
